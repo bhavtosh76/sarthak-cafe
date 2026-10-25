@@ -1,0 +1,42 @@
+.viewAll {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.viewAll:hover {
+  text-decoration: underline;
+}
+
+.promises {
+  background: var(--color-surface);
+  border-block: 1px solid var(--color-border);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding-block: clamp(2rem, 5vw, 3rem);
+}
+
+.promise {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.promise > span {
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+
+.promise h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.promise p {
+  font-size: 0.86rem;
+  color: var(--color-muted);
+}

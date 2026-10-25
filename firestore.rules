@@ -1,0 +1,38 @@
+rules_version = '2';
+
+// Security rules for Sarthak Cafe Firestore collections:
+//  - menu     : public read, write only for signed-in admin
+//  - orders   : anyone can place an order, anyone can read ONE order by id
+//               (for the order-confirmation page), only admin can list/update
+//  - messages : public create (contact form), admin-only read
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /menu/{itemId} {
+      allow read: if true;
+      allow create, update, delete: if request.auth != null;
+    }
+
+    match /orders/{orderId} {
+      allow create: if request.resource.data.status == 'placed'
+                    && request.resource.data.items.size() > 0
+                    && request.resource.data.total is number
+                    && request.resource.data.customer.phone is string;
+      // get = single document read (order confirmation / tracking)
+      allow get: if true;
+      allow list, update, delete: if request.auth != null;
+    }
+
+    match /messages/{messageId} {
+      allow create: if request.resource.data.name is string
+                    && request.resource.data.email is string
+                    && request.resource.data.message is string
+                    && request.resource.data.message.size() <= 1000;
+      allow list, delete: if request.auth != null;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

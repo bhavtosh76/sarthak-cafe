@@ -1,0 +1,38 @@
+.wrap {
+  display: grid;
+  place-items: center;
+  min-height: 55vh;
+}
+
+.inner {
+  text-align: center;
+  max-width: 540px;
+  margin-inline: auto;
+}
+
+.code {
+  display: block;
+  font-size: clamp(4rem, 14vw, 7rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.inner h1 {
+  margin-top: 10px;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+}
+
+.inner p {
+  margin-top: 8px;
+  color: var(--color-muted);
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}

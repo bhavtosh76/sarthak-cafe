@@ -1,0 +1,215 @@
+/* ============================================================
+   Sarthak Cafe — global styles & design tokens
+   Component-specific rules live in *.module.css files.
+   ============================================================ */
+
+:root {
+  /* Brand */
+  --color-primary: #e23744;
+  --color-primary-dark: #c62a36;
+  --color-primary-soft: #fff1f2;
+  --color-accent: #ff7e33;
+
+  /* Neutrals */
+  --color-ink: #1c1c1c;
+  --color-ink-soft: #3d3d3d;
+  --color-muted: #6b6b6b;
+  --color-border: #e9e9ec;
+  --color-surface: #ffffff;
+  --color-bg: #f7f7f8;
+
+  /* Semantics */
+  --color-success: #24963f;
+  --color-veg: #24963f;
+  --color-nonveg: #e23744;
+  --color-warning: #f5a623;
+  --color-danger: #d92d20;
+
+  /* Shape & elevation */
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.07);
+  --shadow: 0 4px 18px rgba(0, 0, 0, 0.09);
+  --shadow-lg: 0 18px 44px rgba(0, 0, 0, 0.16);
+
+  /* Layout */
+  --container: 1180px;
+  --nav-height: 66px;
+  --transition: 180ms ease;
+
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--color-bg);
+  color: var(--color-ink);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0;
+}
+
+/* ---------- utilities ---------- */
+
+.container {
+  width: min(var(--container), 100% - 2.5rem);
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.sectionHead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.sectionHead h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.sectionHead p {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- shared form controls ---------- */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-ink-soft);
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-soft);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #a5a5a5;
+}
+
+.fieldError {
+  font-size: 0.78rem;
+  color: var(--color-danger);
+  font-weight: 500;
+}
+
+/* ---------- shared states ---------- */
+
+.loader {
+  display: grid;
+  place-items: center;
+  gap: 14px;
+  padding: 4rem 1rem;
+  color: var(--color-muted);
+}
+
+.spinner {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
