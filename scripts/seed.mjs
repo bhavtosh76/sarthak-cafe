@@ -202,7 +202,13 @@ async function main() {
       console.log(`  👤 Admin login created: ${env.ADMIN_EMAIL}`)
     } catch (error) {
       if (error.code === 'auth/email-already-exists') {
-        console.log(`  👤 Admin already exists: ${env.ADMIN_EMAIL}`)
+        // Keep .env in sync instead of silently keeping a stale password.
+        const existing = await auth.getUserByEmail(env.ADMIN_EMAIL)
+        await auth.updateUser(existing.uid, {
+          password: env.ADMIN_PASSWORD,
+          displayName: 'Sarthak Cafe Admin',
+        })
+        console.log(`  👤 Admin login synced: ${env.ADMIN_EMAIL}`)
       } else {
         throw error
       }

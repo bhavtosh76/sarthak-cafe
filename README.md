@@ -154,5 +154,6 @@ scripts/deploy.mjs   build + Firebase Hosting/Firestore rules deploy
 | `npm run lint` | oxlint |
 | `npm run typecheck` | `tsc` project build |
 | `npm run seed` | Write menu images to `public/menu-images/` + menu data to Firestore |
+| `npm run set-admin` | Create or reset the Firebase Auth admin from `ADMIN_EMAIL` / `ADMIN_PASSWORD` |
 | `npm run update-images` | Repoint Firestore `imageUrl` fields at `public/menu-images/*.jpg` |
 | `npm run deploy` | Build + deploy Hosting and Firestore rules (service account aware) |

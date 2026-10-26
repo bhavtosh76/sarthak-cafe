@@ -82,7 +82,7 @@ export default function AdminLoginPage() {
               id="admin-email"
               type="email"
               autoComplete="username"
-              placeholder="admin@sarthakcafe.in"
+              placeholder="bhavtosh555@gmail.com"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
             />
