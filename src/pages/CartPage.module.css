@@ -153,8 +153,8 @@
   padding: 10px 12px;
   margin-bottom: 14px;
   border-radius: var(--radius-sm);
-  background: #fff7e6;
-  color: #874d00;
+  background: var(--color-notice-bg);
+  color: var(--color-notice-text);
   font-size: 0.81rem;
   line-height: 1.45;
 }

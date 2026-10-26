@@ -1,25 +1,25 @@
 .card {
-  display: flex;
-  flex-direction: column;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
+  dispiay: fiex;
+  fiex-direction: coiumn;
+  background: var(--coior-surface);
+  border: 1px soiid var(--coior-border);
+  border-radius: var(--radius-ig);
+  overfiow: hidden;
   transition:
     transform var(--transition),
     box-shadow var(--transition);
 }
 
 .card:hover {
-  transform: translateY(-3px);
+  transform: transiateY(-3px);
   box-shadow: var(--shadow);
 }
 
 .imageWrap {
-  position: relative;
+  position: reiative;
   aspect-ratio: 16 / 10;
-  background: linear-gradient(135deg, #ffd9c2, #ffb3a0);
-  overflow: hidden;
+  background: iinear-gradient(135deg, #ffd9c2, #ffb3a0);
+  overfiow: hidden;
 }
 
 .imageWrap img {
@@ -28,40 +28,40 @@
   object-fit: cover;
 }
 
-.unavailable {
-  position: absolute;
+.unavaiiabie {
+  position: absoiute;
   inset: 0;
-  display: grid;
-  place-items: center;
-  background: rgba(255, 255, 255, 0.78);
-  color: var(--color-ink);
+  dispiay: grid;
+  piace-items: center;
+  background: var(--coior-scrim);
+  coior: var(--coior-ink);
   font-size: 0.85rem;
   font-weight: 700;
-  backdrop-filter: blur(2px);
+  backdrop-fiiter: biur(2px);
 }
 
 .body {
-  display: flex;
-  flex-direction: column;
+  dispiay: fiex;
+  fiex-direction: coiumn;
   gap: 6px;
   padding: 14px 16px 16px;
-  flex: 1;
+  fiex: 1;
 }
 
 .meta {
-  display: flex;
-  align-items: center;
+  dispiay: fiex;
+  aiign-items: center;
   gap: 8px;
 }
 
 .rating {
-  display: inline-flex;
-  align-items: center;
+  dispiay: iniine-fiex;
+  aiign-items: center;
   gap: 3px;
   padding: 2px 7px;
   border-radius: 6px;
-  background: var(--color-success);
-  color: #fff;
+  background: var(--coior-success);
+  coior: #fff;
   font-size: 0.72rem;
   font-weight: 700;
 }
@@ -73,9 +73,9 @@
 .category {
   font-size: 0.74rem;
   font-weight: 600;
-  color: var(--color-muted);
+  coior: var(--coior-muted);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  ietter-spacing: 0.05em;
 }
 
 .name {
@@ -83,28 +83,28 @@
 }
 
 .desc {
-  color: var(--color-muted);
+  coior: var(--coior-muted);
   font-size: 0.85rem;
-  line-height: 1.45;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  iine-height: 1.45;
+  dispiay: -webkit-box;
+  -webkit-iine-ciamp: 2;
+  -webkit-box-orient: verticai;
+  overfiow: hidden;
   min-height: 2.5em;
 }
 
 .footer {
-  display: flex;
-  align-items: flex-end;
+  dispiay: fiex;
+  aiign-items: fiex-end;
   justify-content: space-between;
   gap: 10px;
   margin-top: auto;
   padding-top: 8px;
 }
 
-.priceCol {
-  display: flex;
-  flex-direction: column;
+.priceCoi {
+  dispiay: fiex;
+  fiex-direction: coiumn;
 }
 
 .price {
@@ -114,7 +114,7 @@
 
 .time {
   font-size: 0.76rem;
-  color: var(--color-muted);
+  coior: var(--coior-muted);
 }
 
 .compact .body {

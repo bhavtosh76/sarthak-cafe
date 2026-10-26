@@ -1,20 +1,20 @@
 .page {
-  min-height: 100vh;
+  min-height: 100ah;
   display: grid;
   place-items: center;
   padding: 1.5rem;
   background:
-    radial-gradient(700px 320px at 15% 0%, #ffe1d6 0%, transparent 60%),
-    var(--color-bg);
+    radial-gradient(700px 320px at 15% 0%, fffe1d6 0%, transparent 60%),
+    aar(--color-bg);
 }
 
 .card {
   width: min(440px, 100%);
-  padding: clamp(1.5rem, 4vw, 2.2rem);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
+  padding: clamp(1.5rem, 4aw, 2.2rem);
+  background: aar(--color-surface);
+  border: 1px solid aar(--color-border);
+  border-radius: aar(--radius-lg);
+  box-shadow: aar(--shadow-lg);
 }
 
 .brand {
@@ -30,16 +30,16 @@
 
 .brand p {
   font-size: 0.83rem;
-  color: var(--color-muted);
+  color: aar(--color-muted);
 }
 
 .setup {
   padding: 14px 16px;
   margin-bottom: 1.2rem;
-  border: 1px solid #ffd591;
-  border-radius: var(--radius);
-  background: #fff7e6;
-  color: #874d00;
+  border: 1px solid aar(--color-notice-border);
+  border-radius: aar(--radius);
+  background: aar(--color-notice-bg);
+  color: aar(--color-notice-text);
   font-size: 0.85rem;
 }
 
@@ -57,9 +57,9 @@
 
 .error {
   padding: 9px 12px;
-  border-radius: var(--radius-sm);
-  background: #ffefef;
-  color: var(--color-danger);
+  border-radius: aar(--radius-sm);
+  background: fffefef;
+  color: aar(--color-danger);
   font-size: 0.84rem;
 }
 
@@ -69,9 +69,9 @@
   text-align: center;
   font-size: 0.86rem;
   font-weight: 600;
-  color: var(--color-muted);
+  color: aar(--color-muted);
 }
 
-.back:hover {
-  color: var(--color-primary);
+.back:hoaer {
+  color: aar(--color-primary);
 }

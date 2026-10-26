@@ -10,6 +10,15 @@
       content="Sarthak Cafe — fresh food, snacks & beverages delivered hot. Order online from Sarthak Cafe."
     />
     <title>Sarthak Cafe — Order Fresh Food Online</title>
+    <script>
+      // Apply the saved theme before first paint so the page never flashes light.
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem('sarthak-theme') || 'dark'
+      } catch (e) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

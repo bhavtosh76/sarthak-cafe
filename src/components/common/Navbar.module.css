@@ -87,6 +87,29 @@
   gap: 12px;
 }
 
+.themeToggle {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-ink-soft);
+  cursor: pointer;
+  transition:
+    background var(--transition),
+    color var(--transition),
+    transform var(--transition);
+}
+
+.themeToggle:hover {
+  background: var(--color-bg);
+  color: var(--color-primary);
+  transform: rotate(15deg);
+}
+
 .cart {
   position: relative;
   display: grid;

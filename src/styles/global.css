@@ -18,6 +18,27 @@
   --color-surface: #ffffff;
   --color-bg: #f7f7f8;
 
+  /* Warm tints used by hero gradients and notice banners */
+  --color-tint-top: #fff7f4;
+  --color-notice-bg: #fff7e6;
+  --color-notice-bg-strong: #fff3e0;
+  --color-notice-border: #ffd591;
+  --color-notice-border-soft: #ffe7ba;
+  --color-notice-text: #874d00;
+
+  /* Floating cards / chips that sit on top of photos */
+  --color-float: #ffffff;
+  --color-float-border: #ffffff;
+  --color-float-glass: rgba(255, 255, 255, 0.94);
+  --color-scrim: rgba(255, 255, 255, 0.78);
+
+  /* Warm radial glow behind hero / auth panels */
+  --color-glow: #ffe1d6;
+
+  /* Placeholder shown before a dish photo loads */
+  --color-ph-start: #ffd9c2;
+  --color-ph-end: #ffb3a0;
+
   /* Semantics */
   --color-success: #24963f;
   --color-veg: #24963f;
@@ -40,6 +61,52 @@
   --transition: 180ms ease;
 
   --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ============================================================
+   Dark theme — applied via <html data-theme="dark">.
+   Only token overrides live here; components read the tokens.
+   ============================================================ */
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  /* Neutrals */
+  --color-ink: #f2f2f4;
+  --color-ink-soft: #d4d4d8;
+  --color-muted: #9b9ba3;
+  --color-border: #2c2c33;
+  --color-surface: #17171c;
+  --color-bg: #0e0e12;
+
+  /* Brand soft variant (used for chips, badges, focus rings) */
+  --color-primary-soft: #3a161c;
+
+  /* Warm tints, darkened so banners stay readable */
+  --color-tint-top: #1b1417;
+  --color-notice-bg: #2a1f0d;
+  --color-notice-bg-strong: #33250e;
+  --color-notice-border: #6b4a12;
+  --color-notice-border-soft: #4a3512;
+  --color-notice-text: #f0c069;
+
+  /* Floating cards / chips on top of photos */
+  --color-float: #1a1a20;
+  --color-float-border: #2c2c33;
+  --color-float-glass: rgba(26, 26, 32, 0.92);
+  --color-scrim: rgba(14, 14, 18, 0.78);
+
+  /* Warm radial glow — dimmed so it reads as an ember, not a hotspot */
+  --color-glow: #4a1d17;
+
+  /* Dish photo placeholder */
+  --color-ph-start: #3a2620;
+  --color-ph-end: #2a1b17;
+
+  /* Elevation reads softer on dark surfaces */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 18px 44px rgba(0, 0, 0, 0.62);
 }
 
 *,

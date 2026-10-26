@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { CAFE_NAME } from '../../constants'
 import { useCart } from '../../context/CartContext'
+import { useTheme } from '../../hooks/useTheme'
 import styles from './Navbar.module.css'
 
 const NAV_LINKS = [
@@ -13,6 +14,7 @@ const NAV_LINKS = [
 /** Sticky top navigation with cart badge and a mobile menu. */
 export function Navbar() {
   const { totalItems } = useCart()
+  const { theme, toggleTheme } = useTheme()
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -52,6 +54,35 @@ export function Navbar() {
         </nav>
 
         <div className={styles.actions}>
+          <button
+            type="button"
+            className={styles.themeToggle}
+            onClick={toggleTheme}
+            aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+            title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
+          >
+            {theme === 'dark' ? (
+              /* sun */
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" strokeWidth="1.8" />
+                <g stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+                  <path d="M12 2.6v2.4M12 19v2.4M2.6 12h2.4M19 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M18.7 5.3L17 7M7 17l-1.7 1.7" />
+                </g>
+              </svg>
+            ) : (
+              /* moon */
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path
+                  d="M20 14.5A8.4 8.4 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            )}
+          </button>
+
           <Link to="/cart" className={styles.cart} aria-label={`Cart, ${totalItems} items`}>
             <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
               <path

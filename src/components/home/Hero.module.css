@@ -1,7 +1,7 @@
 .hero {
   background:
-    radial-gradient(900px 420px at 85% -10%, #ffe1d6 0%, transparent 60%),
-    linear-gradient(180deg, #fff7f4 0%, var(--color-bg) 100%);
+    radial-gradient(900px 420px at 85% -10%, var(--color-glow) 0%, transparent 60%),
+    linear-gradient(180deg, var(--color-tint-top) 0%, var(--color-bg) 100%);
   border-bottom: 1px solid var(--color-border);
   overflow: hidden;
 }
@@ -153,7 +153,7 @@
   border-radius: 28px;
   overflow: hidden;
   background: var(--color-surface);
-  border: 6px solid #fff;
+  border: 6px solid var(--color-float-border);
   box-shadow: var(--shadow-lg);
   transform: rotate(-2deg);
 }
@@ -173,7 +173,7 @@
   width: clamp(120px, 34%, 168px);
   padding: 6px 6px 8px;
   border-radius: 18px;
-  background: #fff;
+  background: var(--color-float);
   box-shadow: var(--shadow-lg);
   transform: rotate(3deg);
   animation: bob 5s ease-in-out infinite;
@@ -211,7 +211,7 @@
   flex-direction: column;
   padding: 10px 14px;
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.94);
+  background: var(--color-float-glass);
   box-shadow: var(--shadow);
   backdrop-filter: blur(6px);
 }

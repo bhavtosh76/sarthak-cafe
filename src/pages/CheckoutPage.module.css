@@ -14,10 +14,10 @@
 .notice {
   padding: 12px 16px;
   margin-bottom: 1.2rem;
-  border: 1px solid #ffd591;
+  border: 1px solid var(--color-notice-border);
   border-radius: var(--radius);
-  background: #fff7e6;
-  color: #874d00;
+  background: var(--color-notice-bg);
+  color: var(--color-notice-text);
   font-size: 0.87rem;
 }
 

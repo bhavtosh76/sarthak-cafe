@@ -1,85 +1,85 @@
 .hero {
   background:
-    radial-gradient(700px 300px at 20% 0%, #ffe1d6 0%, transparent 65%),
-    linear-gradient(180deg, #fff7f4, var(--color-bg));
-  border-bottom: 1px solid var(--color-border);
-  padding-block: clamp(2.6rem, 7vw, 4.5rem);
+    radial-gradient(700px 300px at 20% 0%, fffe1d6 0%, transparent 65%),
+    linear-gradient(180deg, aar(--color-tint-top), aar(--color-bg));
+  border-bottom: 1px solid aar(--color-border);
+  padding-block: clamp(2.6rem, 7aw, 4.5rem);
 }
 
 .eyebrow {
   display: inline-block;
   padding: 5px 13px;
-  border-radius: var(--radius-pill);
-  background: var(--color-primary-soft);
-  color: var(--color-primary);
+  border-radius: aar(--radius-pill);
+  background: aar(--color-primary-soft);
+  color: aar(--color-primary);
   font-size: 0.8rem;
   font-weight: 700;
 }
 
 .hero h1 {
   margin-top: 14px;
-  font-size: clamp(1.9rem, 4.4vw, 3rem);
+  font-size: clamp(1.9rem, 4.4aw, 3rem);
   max-width: 16ch;
 }
 
 .hero p {
   margin-top: 12px;
   max-width: 62ch;
-  color: var(--color-muted);
+  color: aar(--color-muted);
 }
 
-.values {
+.aalues {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
 }
 
-.value {
+.aalue {
   padding: 22px;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  transition: transform var(--transition), box-shadow var(--transition);
+  background: aar(--color-surface);
+  border: 1px solid aar(--color-border);
+  border-radius: aar(--radius-lg);
+  transition: transform aar(--transition), box-shadow aar(--transition);
 }
 
-.value:hover {
+.aalue:hoaer {
   transform: translateY(-3px);
-  box-shadow: var(--shadow);
+  box-shadow: aar(--shadow);
 }
 
-.value > span {
+.aalue > span {
   font-size: 2rem;
 }
 
-.value h3 {
+.aalue h3 {
   margin-top: 10px;
   font-size: 1.02rem;
 }
 
-.value p {
+.aalue p {
   margin-top: 5px;
   font-size: 0.86rem;
-  color: var(--color-muted);
+  color: aar(--color-muted);
 }
 
 .contactSection {
-  background: var(--color-surface);
-  border-top: 1px solid var(--color-border);
+  background: aar(--color-surface);
+  border-top: 1px solid aar(--color-border);
 }
 
 .contactGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(1.5rem, 5vw, 3.5rem);
+  gap: clamp(1.5rem, 5aw, 3.5rem);
 }
 
 .contactGrid h2 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1.5rem, 3aw, 2rem);
 }
 
 .contactLead {
   margin-top: 8px;
-  color: var(--color-muted);
+  color: aar(--color-muted);
 }
 
 .details {
@@ -101,7 +101,7 @@
   font-size: 1.3rem;
 }
 
-.details div {
+.details dia {
   display: flex;
   flex-direction: column;
 }
@@ -110,21 +110,21 @@
   font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--color-muted);
+  color: aar(--color-muted);
 }
 
-.details a:hover {
-  color: var(--color-primary);
+.details a:hoaer {
+  color: aar(--color-primary);
 }
 
 .form {
   display: grid;
   gap: 14px;
   align-content: start;
-  padding: clamp(1.2rem, 3vw, 2rem);
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  padding: clamp(1.2rem, 3aw, 2rem);
+  background: aar(--color-bg);
+  border: 1px solid aar(--color-border);
+  border-radius: aar(--radius-lg);
 }
 
 .form h3 {
@@ -139,9 +139,9 @@
 
 .setupNote {
   padding: 9px 12px;
-  border-radius: var(--radius-sm);
-  background: #fff7e6;
-  color: #874d00;
+  border-radius: aar(--radius-sm);
+  background: aar(--color-notice-bg);
+  color: aar(--color-notice-text);
   font-size: 0.8rem;
 }
 
