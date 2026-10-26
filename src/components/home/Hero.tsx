@@ -71,12 +71,18 @@ export function Hero() {
         </div>
 
         <div className={styles.visual} aria-hidden="true">
-          <div className={styles.plate}>
-            <span>🍛</span>
+          <div className={styles.photo}>
+            <img src="/hero.jpg" alt="" loading="eager" decoding="async" />
           </div>
-          <span className={`${styles.float} ${styles.f1}`}>🥟</span>
-          <span className={`${styles.float} ${styles.f2}`}>🥤</span>
-          <span className={`${styles.float} ${styles.f3}`}>🍰</span>
+
+          <div className={styles.thumb}>
+            <img src="/menu-images/paneer-tikka.jpg" alt="" loading="lazy" decoding="async" />
+            <span>
+              <strong>4.5 ★</strong>
+              Paneer Tikka
+            </span>
+          </div>
+
           <div className={`${styles.chip} ${styles.chip1}`}>
             <strong>Hygienic kitchen</strong>
             <span>FSSAI certified</span>
