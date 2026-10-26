@@ -117,7 +117,6 @@ ol[role='list'] {
   gap: 1rem;
   margin-bottom: 1.6rem;
 }
-
 .sectionHead h2 {
   font-size: clamp(1.5rem, 3vw, 2rem);
 }
@@ -204,6 +203,21 @@ ol[role='list'] {
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 640px) {
+  /* Stack the "heading + link" rows so links don't squeeze on narrow phones */
+  .sectionHead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .container {
+    width: min(var(--container), 100% - 2rem);
   }
 }
 
